@@ -8,6 +8,7 @@ public class Exer21 {
 		int op = 0;
 		String valor = "";
 		
+		@SuppressWarnings("serial")
 		ArrayList<String> list = new ArrayList<String>(){{
 		    add("b");
 		    add("3");

@@ -1,7 +1,5 @@
 package ex2;
 
-import java.util.ArrayList;
-
 public class Aluno {
 	private String nome;
 	private int nota;
