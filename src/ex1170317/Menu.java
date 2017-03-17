@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
-	@SuppressWarnings("unchecked")
 	public Menu(){
 		/*
 		 * Exercicio 1:
