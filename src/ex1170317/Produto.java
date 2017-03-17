@@ -18,7 +18,6 @@ public class Produto {
 	public void removerStock(int stock){
 		this.stock -= stock;
 	}
-	
 	public void adicionarStock(double stock){
 		this.stock += stock;
 	}

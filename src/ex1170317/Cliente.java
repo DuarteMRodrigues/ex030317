@@ -16,7 +16,6 @@ public class Cliente {
 	public void removerSaldo(double saldo){
 		this.saldo -= saldo;
 	}
-	
 	public void adicionarSaldo(double saldo){
 		this.saldo += saldo;
 	}

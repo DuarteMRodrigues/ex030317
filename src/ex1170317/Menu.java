@@ -97,9 +97,13 @@ public class Menu {
 					
 				case 3:
 					list = comprar.comprarProduto(clientes, produtos, totCli, totProd, s);
-					clientes = (ArrayList<Cliente>) list.get(0);
-					produtos = (ArrayList<Produto>) list.get(1);
-					System.out.println("Compra efetuada com sucesso");
+					if(!list.isEmpty()){
+						clientes = (ArrayList<Cliente>) list.get(0);
+						produtos = (ArrayList<Produto>) list.get(1);
+						System.out.println("Compra efetuada com sucesso.");
+					}
+					else
+						System.out.println("Compra nao efetuada.");
 					break;
 					
 				case 4:

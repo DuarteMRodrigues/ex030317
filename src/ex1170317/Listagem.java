@@ -18,8 +18,8 @@ public class Listagem {
 			
 			switch(escolha){
 				case 0:
-				
 					break;
+					
 				case 1:
 					listarClientes(clientes, totCli);
 					break;
