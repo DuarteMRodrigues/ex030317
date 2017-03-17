@@ -62,6 +62,7 @@ public class Menu {
 		ArrayList<Produto> produtos = new ArrayList<Produto>();
 		ArrayList<ArrayList<?>> list = new ArrayList<ArrayList<?>>();
 		Scanner s = new Scanner(System.in);
+		AdicionarCampos campos = new AdicionarCampos();
 		
 		do{
 			System.out.println("\n\n0 - Sair");
@@ -100,11 +101,11 @@ public class Menu {
 					break;
 					
 				case 4:
-					clientes = adicionarSaldo(clientes, s);
+					clientes = campos.adicionarSaldo(clientes, s);
 					break;
-					
+				
 				case 5:
-					produtos = adicionarStock(produtos, s);
+					produtos = campos.adicionarStock(produtos, s);
 					break;
 					
 				case 6:
@@ -211,36 +212,5 @@ public class Menu {
 		list.add(clientes);
 		list.add(produtos);
 		return list;
-	}
-	
-	public ArrayList<Cliente> adicionarSaldo(ArrayList<Cliente> clientes, Scanner s){
-		int idCli = 0;
-		double preco = 0.0;
-		
-		System.out.print("Insira o ID do cliente: ");
-		idCli = s.nextInt();
-		idCli -= 1;
-		
-		System.out.print("Insira a quantidade de saldo que quer inserir: ");
-		preco = s.nextDouble();
-		s.nextLine();
-		
-		clientes.get(idCli).adicionarSaldo(preco);
-		return clientes;
-	}
-	
-	public ArrayList<Produto> adicionarStock(ArrayList<Produto> produtos, Scanner s){
-		int idProd = 0, stock = 0;
-		
-		System.out.print("Insira o ID do produto: ");
-		idProd = s.nextInt();
-		idProd -=1;
-		
-		System.out.print("Insira a quantidade de stock que quer inserir: ");
-		stock = s.nextInt();
-		s.nextLine();
-		
-		produtos.get(idProd).adicionarStock(stock);
-		return produtos;
 	}
 }
